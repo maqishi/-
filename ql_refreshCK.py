@@ -106,7 +106,7 @@ if __name__ == '__main__':
             wspin = re.findall(r"pin=(.*?);", i["value"])[0]
             if ptck == "wskey错误":
                 print("第%s个wskey可能过期了,pin为%s" % (count, wspin))
-            elif ptck == "未知错误":
+            elif ptck == "未知错误" or ptck == "error":
                 print("第%s个wskey发生了未知错误,pin为%s" % (count, wspin))
             else:
                 ptpin = re.findall(r"pt_pin=(.*?);", ptck)[0]
